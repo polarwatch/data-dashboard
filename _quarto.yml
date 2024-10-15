@@ -1,0 +1,11 @@
+project:
+  type: website
+format:
+  dashboard:
+    nav-buttons:
+      - icon: github
+        href: https://github.com/polarwatch/
+
+execute:
+  cache: false
+

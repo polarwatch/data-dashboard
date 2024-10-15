@@ -1,0 +1,80 @@
+---
+title: "CoastWatch-West Coast"
+format: 
+  dashboard:
+    orientation: columns
+logo: img/cw_logo.png
+logo-alt: "NOAA CoastWatch logo"
+jupyter: python3
+---
+
+```{python}
+#| label: load-packages_cw
+import pandas as pd
+import requests
+import io
+from itables import show
+from plotnine import *
+import great_tables as gt
+import datetime
+```
+
+```{python}
+#| label: load-data-cw
+
+# WCN LOG
+# url = 'https://coastwatch.pfeg.noaa.gov/wcn/erddap/tabledap/westcoast_datause_monthly.csv'
+
+# PW LOG
+#url = 'https://coastwatch.pfeg.noaa.gov/wcn/erddap/tabledap/polarwatch_datause_monthly.csv?'
+
+# req = requests.get(url).content
+# df = pd.read_csv(io.StringIO(req.decode('utf-8')), skiprows=[1])
+# df.to_csv("wcn_usage.csv", index=False)
+# dataset_id,data_volume,requests,group_title,data_source,dataset_title,var,sensor
+
+df = pd.read_csv("wcn_usage.csv")
+df_crosswalk = pd.read_csv("data/wcn_log_crosswalk.csv")
+```
+
+```{python}
+#| label: prep-usage-data
+
+# Get Year and Month from date
+df = df.set_index('dataset_id')
+df['time'] = pd.to_datetime(df['time'], utc=True)
+df['year'] = df['time'].dt.year
+df['month'] = df['time'].dt.month
+```
+```{python}
+# This year
+thisyear = datetime.date.today().year
+
+# Get all data
+alldata = df.loc['all_datasets']
+
+# Compute sum for all datasets
+grouped_sum = alldata.groupby(['year'])[['requests', 'requests_redirect','data_volume']].sum().reset_index()
+
+# Compute mean stats for all dataset
+grouped_mean = alldata.groupby(['year'])[['unique_visitors']].mean().reset_index()
+
+# Get this year sum
+stat_thisyear_sum = grouped_sum[grouped_sum['year'] == thisyear]
+
+# Get this year mean
+stat_thisyear_mean = grouped_mean[grouped_mean['year'] == thisyear]
+
+
+#grouped_sum = alldata.groupby(['year', 'month'])[['requests', 'requests_redirect','data_volume']].sum().reset_index()
+
+# 10 Most Requested Data Products (This year)
+thisyear_df = df[(df['year'] == thisyear) & (df.index != 'all_datsets')].nlargest(10, 'requests')
+#thisyear_df.merge(df_crosswalk, on="dataset_id", how='inner')
+
+stat_thisyear_sum
+print(f"# request: {stat_thisyear_sum['requests'].values[0]}")
+print(f"# request_redirect: {stat_thisyear_sum['requests_redirect'].values[0]}")
+print(f"# data_volume: {stat_thisyear_sum['data_volume'].values[0]}")
+print(f"# monthly average user: {int(stat_thisyear_mean['unique_visitors'].values[0])}")
+```

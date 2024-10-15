@@ -1,0 +1,16 @@
+{
+  "hash": "328bc15887b7fb89d10e5831aa5de74d",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: CoastWatch-West Coast\nformat:\n  dashboard:\n    orientation: columns\nlogo: img/cw_logo.png\nlogo-alt: NOAA CoastWatch logo\n---\n\n\n\n\n\n\n\n::: {#87805ddf .cell execution_count=4}\n\n::: {.cell-output .cell-output-display execution_count=40}\n```{=html}\n<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>year</th>\n      <th>requests</th>\n      <th>requests_redirect</th>\n      <th>data_volume</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>4</th>\n      <td>2024</td>\n      <td>24113788</td>\n      <td>2421481</td>\n      <td>61779378</td>\n    </tr>\n  </tbody>\n</table>\n</div>\n```\n:::\n\n::: {.cell-output .cell-output-stdout}\n```\n# request: 24113788\n# request_redirect: 2421481\n# data_volume: 61779378\n# monthly average user: 15354\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js\" integrity=\"sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==\" crossorigin=\"anonymous\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js\" integrity=\"sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==\" crossorigin=\"anonymous\" data-relocate-top=\"true\"></script>\n<script type=\"application/javascript\">define('jquery', [],function() {return window.jQuery;})</script>\n"
+      ]
+    }
+  }
+}

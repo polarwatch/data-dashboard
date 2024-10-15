@@ -1,0 +1,12 @@
+{
+  "hash": "6c73dc9e963dea299eef07837ea7367b",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: Data Usage Dashboard\nformat:\n  dashboard:\n    orientation: columns\n    nav-buttons:\n      - github\nlogo: img/cw_logo.png\nlogo-alt: NOAA CoastWatch logo\n---\n\n\n\n\n\n::: {#cell-prep-usage-data .cell execution_count=3}\n\n::: {#prep-usage-data .cell-output .cell-output-display execution_count=9}\n```\ndata_volume                          1039472\nrequests                             1666886\nnc_req                                771284\ndods_req                              397050\ntext_req                              132922\nmetadata_req                           43712\ngraph_req                              87238\njson_req                               11484\nmat_req                                 6462\nimages_req                            216608\nother_req                                NaN\nnc_size                         377662098214\ndods_size                       343401979274\ntext_size                       249478188784\nmetadata_size                      477657394\ngraph_size                               NaN\njson_size                          512841470\nmat_size                         53740130212\nimages_size                      12008368274\nother_size                               NaN\nunique_visitors                         9232\ntime_epoch                        1671134400\ntime               2022-12-15 12:00:00+00:00\nyear                                    2022\nmonth                                     12\nName: all_datsets, dtype: object\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "dashboard_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

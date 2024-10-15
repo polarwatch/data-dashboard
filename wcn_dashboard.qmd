@@ -1,0 +1,185 @@
+---
+title: "CoastWatch-West Coast"
+format: 
+  dashboard:
+    logo: img/cw_logo.png
+    logo-alt: "NOAA CoastWatch logo"
+    scrolling: true 
+jupyter: python3
+---
+
+```{python}
+#| label: load-packages_cw
+import pandas as pd
+import requests
+import io
+from itables import show
+from plotnine import *
+import great_tables as gt
+import datetime
+```
+
+```{python}
+#| label: load-data-cw
+
+df = pd.read_csv("wcn_usage.csv")
+df_crosswalk = pd.read_csv("data/wcn_log_crosswalk.csv")
+```
+
+```{python}
+#| label: prep-usage-data
+
+# Get Year and Month from date
+# df = df.set_index('dataset_id')
+df['all_requests'] = df['requests'] + df['requests_redirect']
+df['time'] = pd.to_datetime(df['time'], utc=True)
+df['year'] = df['time'].dt.year
+df['month'] = df['time'].dt.month
+```
+```{python}
+# This year
+thisyear = datetime.date.today().year
+
+# Get all data
+#alldata = df.loc[df.index == 'all_datasets']
+alldata = df[df['dataset_id'] == 'all_datasets']
+# alldata_thisyear = alldata[alldata['year'] == thisyear]
+
+# Columns for stats
+# Extract file types by removing '_reqs' from the column names
+stats_cols = ['data_volume', 'requests', 'nc_req', 'dods_req', 'text_req',
+       'metadata_req', 'graph_req', 'json_req', 'mat_req', 'images_req',
+       'file_downloads_req', 'other_req', 'nc_volume', 'dods_volume',
+       'text_volume', 'metadata_volume', 'graph_volume', 'json_volume',
+       'mat_volume', 'images_volume', 'file_downloads_volume', 'other_size',
+       'requests_redirect', 'nc_req_redirect', 'dods_req_redirect',
+       'text_req_redirect', 'metadata_req_redirect', 'graph_req_redirect',
+       'json_req_redirect', 'mat_req_redirect', 'images_req_redirect',
+       'file_download_req_redirect', 'other_req_redirect', 'all_requests']
+
+
+# Compute sum for all datasets
+alldata_sum = alldata.groupby(['year'])[stats_cols].sum().reset_index()
+
+# Compute mean stats for all dataset
+alldata_mean = alldata.groupby(['year'])[['unique_visitors']].mean().reset_index()
+
+
+
+# ValueBox Data
+total_requests = alldata_sum.loc[alldata_sum['year'] == thisyear, 'requests'].iloc[0]
+total_redirect = alldata_sum.loc[alldata_sum['year'] == thisyear, 'requests_redirect'].iloc[0]
+unique_users = int(alldata_mean.loc[alldata_mean['year'] == thisyear, 'unique_visitors'].iloc[0])
+total_data = alldata_sum.loc[alldata_sum['year'] == thisyear, 'data_volume'].iloc[0]
+
+
+# 10 Most Requested Data Products (This year)
+# top10 = df_all.loc[df_all['year'] == thisyear].groupby(['dataset_title'])['requests'].sum().reset_index()
+# thisyear_top_10 = datasets_years[(datasets_years['year'] == thisyear) & (datasets_years['dataset_id'] != 'all_datasets')].nlargest(10, 'all_requests')
+```
+
+## Row {height=10%}
+
+
+```{python}
+#| content: valuebox
+#| title: "No. of Requests"
+#| icon: cloud-download-fill
+#| color: light
+ total_requests
+
+```
+
+```{python}
+#| content: valuebox
+#| icon: cloud-download
+#| title: "No. of Redirect Request"
+#| color: light
+ total_redirect
+ 
+```
+
+```{python}
+#| content: valuebox
+#| icon: database-down
+#| color: light
+#| title: "Data Volume (GB)"
+
+total_data
+
+```
+
+```{python}
+#| content: valuebox
+#| icon: person-lines-fill
+#| color: light
+#| title: "Monthly Avg Users"
+
+unique_users
+```
+
+
+
+## Row {height=40%}
+
+
+
+```{python}
+#| title: 10 Most Requested Data Products
+
+#idx = thisyear_top_10.index
+
+#idx
+df_all_thisyear = df[df['year'] == thisyear].merge(df_crosswalk, on='dataset_id', how='inner')
+top10_thisyear = (df_all_thisyear.groupby('group_title', as_index=False)
+                  .sum(numeric_only=True)
+                  .nlargest(10, 'all_requests'))
+
+
+import plotly.express as px
+fig = px.bar(top10_thisyear, x='group_title', y='all_requests', 
+              color='group_title',hover_data=['requests_x', 'requests_redirect'] )
+
+fig.show()
+```
+
+## Row 
+
+
+
+```{python}
+#| title: Requests by File Type
+
+
+import plotly.express as px
+df_req = alldata_sum[alldata_sum['year'] == thisyear].filter(regex='_req$')
+df_req.columns = df_req.columns.str.extract(r'^(.*)_req$')[0]
+df_req_long = df_req.reset_index(drop=True).melt(var_name='File Type', value_name='Requests')
+
+fig = px.pie(df_req_long, values='Requests', names='File Type', title='Request by file type')
+fig.show()
+
+
+```
+
+
+```{python}
+#| title: Chart 2
+
+import plotly.express as px
+df = px.data.gapminder()
+px.scatter(
+  df, x="gdpPercap", y="lifeExp", 
+  animation_frame="year", animation_group="country",
+  size="pop", color="continent", hover_name="country", 
+  facet_col="continent", log_x=True, size_max=45, 
+  range_x=[100,100000], range_y=[25,90]
+)
+
+
+
+
+```
+
+
+
