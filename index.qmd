@@ -105,7 +105,7 @@ No. of Redirect Request
 :::
 
 ::: {.valuebox icon="database-down" color="#e2e2e2"}
-Data Volume (GB)
+Data Volume (Mb)
 
 `{python} "{:,}".format(total_data)`
 
