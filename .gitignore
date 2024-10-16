@@ -1,2 +1,4 @@
 /.quarto/
 /_site/
+.vdoc.py
+.mypy_cache

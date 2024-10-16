@@ -5,7 +5,7 @@ format:
     logo: img/cw_logo.png
     logo-alt: "NOAA CoastWatch logo"
     scrolling: true 
-    css: custom.scss
+    css: style/custom.scss
 jupyter: python3
 ---
 

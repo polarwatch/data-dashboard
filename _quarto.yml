@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - "data/*csv"
 format:
   dashboard:
     nav-buttons:
@@ -7,7 +9,7 @@ format:
         href: https://github.com/polarwatch/
   html:
     theme:
-      - custom.scss
+      - style/custom.scss
     css: style.css
 
 execute:
