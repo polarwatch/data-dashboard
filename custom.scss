@@ -1,0 +1,43 @@
+/*-- scss:defaults --*/
+
+// fonts
+
+
+// colors
+
+$navbar-bg: #0e2635;
+$navbar-fg: #F0F0F0;
+
+$link-color: #46a6cf;
+$hover-color: lighten($link-color, 40%);
+
+/*-- scss:rules --*/
+.card-header {
+  background-color: #F0F0F0;
+}
+
+.nav-item > a:hover {
+  color: rgba(242, 156, 8, 0.757);
+}
+
+.nav-link{
+  color: #869fe8;
+}
+
+.value-box-area {
+  text-align: center; /* Centers text in the box */
+
+  .value-box-title {
+    font-size: 1.5em !important;
+    color: #555; /* Adjust color as needed */
+  }
+
+  .value-box-value {
+    font-size: 2em !important;
+    font-weight: bold; /* Emphasizes the number */
+    color: #333; /* Adjust color as needed */
+  }
+}
+// .plotly-graph-div {
+//   width: 100% !important;
+// }

@@ -5,6 +5,10 @@ format:
     nav-buttons:
       - icon: github
         href: https://github.com/polarwatch/
+  html:
+    theme:
+      - custom.scss
+    css: style.css
 
 execute:
   cache: false
