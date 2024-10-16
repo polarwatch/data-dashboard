@@ -1,0 +1,504 @@
+dataset_id,data_volume,requests,group_title,data_source,dataset_title,var,sensor
+erdTAgeo1day,161,4232,Aviso Altimetry,ESA,Aviso Ocean Currents,currents,blended
+erdTAgeomday,663,15726,Aviso Altimetry,ESA,Aviso Ocean Currents,currents,blended
+erdTAssh1day,3244,3982,Aviso Altimetry,ESA,Aviso Sea Surface Height,sst,modis
+erdTAsshmday,3536,7924,Aviso Altimetry,ESA,Aviso Sea Surface Height,sst,modis
+jplAvisoSshMon,12,680,Aviso Altimetry,ESA,Aviso Sea Surface Height,sst,modis
+charmForecast0day,105,6856,Habitat Model,NOAA,C-HARM HABS Forecast V1,habitat,viirs-snpp
+charmForecast0dayV2,117,2642,Habitat Model,NOAA,C-HARM HABS Forecast V2,habitat,viirs-snpp
+charmForecast1day,16,686,Habitat Model,NOAA,C-HARM HABS Forecast V1,habitat,viirs-snpp
+charmForecast1dayV2,20,1046,Habitat Model,NOAA,C-HARM HABS Forecast V2,habitat,viirs-snpp
+charmForecast2day,9,582,Habitat Model,NOAA,C-HARM HABS Forecast V1,habitat,viirs-snpp
+charmForecast2dayV2,12,926,Habitat Model,NOAA,C-HARM HABS Forecast V2,habitat,viirs-snpp
+charmForecast3day,10,654,Habitat Model,NOAA,C-HARM HABS Forecast V1,habitat,viirs-snpp
+charmForecast3dayV2,56,1548,Habitat Model,NOAA,C-HARM HABS Forecast V2,habitat,viirs-snpp
+erdMurFront41USWest,125720,33680,ERD MUR Sea Surface Temperature,NASA,"Thermal Fronts, NASA MUR",fronts,blended
+jplMURSST,31,1208,ERD MUR Sea Surface Temperature,NASA,"SST, NASA MUR",sst,blended
+jplMURSST41,319602,203672,ERD MUR Sea Surface Temperature,NASA,"SST, NASA MUR",sst,blended
+jplmursst41,0,2,ERD MUR Sea Surface Temperature,NASA,"SST, NASA MUR",sst,blended
+jplMURSST41anom1day,17358,8758,ERD MUR Sea Surface Temperature,NASA,"SST Anomaly, NASA MUR",sst_anom,blended
+jplMURSST41anommday,5376,4330,ERD MUR Sea Surface Temperature,NASA,"SST Anomaly, NASA MUR",sst_anom,blended
+jplMURSST41clim,39,776,ERD MUR Sea Surface Temperature,NASA,"Climatology, NASA MUR",climatology,blended
+jplMURSST41F,1101,1026,ERD MUR Sea Surface Temperature,NASA,"SST, NASA MUR",sst,blended
+jplMURSST41mday,9559,5594,ERD MUR Sea Surface Temperature,NASA,"SST, NASA MUR",sst,blended
+jplMURSST42,,,ERD MUR Sea Surface Temperature,NASA,"SST and SST Anomaly, NASA MUR, 0.25 degree",sst,blended
+erdMBchla14day,41,1550,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMBchla1day,1385,13224,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMBchla3day,172,4346,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMBchla5day,21,1126,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMBchla8day,239,2934,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMBchlamday,900,5828,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMH1cflh1day,105,6144,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMH1cflh1day_R2022NRT,2,98,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMH1cflh1day_R2022SQ,3,124,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMH1cflh8day,64,6214,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMH1cflh8day_R2022NRT,3,106,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMH1cflh8day_R2022SQ,2,82,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMH1cflhmday,59,6098,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMH1cflhmday_R2022NRT,2,92,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMH1cflhmday_R2022SQ,2,98,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMH1chla1day,3130,17676,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMH1chla1day_R2022NRT,14,638,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMH1chla1day_R2022SQ,675,930,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMH1chla8day,20414,46176,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMH1chla8day_R2022NRT,116,470,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMH1chla8day_R202SQ,2704,996,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMH1chlamday,26523,42650,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMH1chlamday_R2022NRT,17,418,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMH1chlamday_R2022SQ,1093,378,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMH1kd4901day,124,7032,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd_490,modis
+erdMH1kd4901day_R2022NRT,3,106,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd_490,modis
+erdMH1kd4901day_R2022SQ,3,130,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd_490,modis
+erdMH1kd4908day,85,7048,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd_490,modis
+erdMH1kd4908day_R2022NRT,3,108,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd_490,modis
+erdMH1kd4908day_R2022SQ,3,134,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd_490,modis
+erdMH1kd490mday,2118,10798,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd_490,modis
+erdMH1kd490mday_R2022NRT,3,116,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd_490,modis
+erdMH1kd490mday_R2022SQ,2,96,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd_490,modis
+erdMH1par01day,43,2226,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMH1par01day_R2022NRT,9,114,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMH1par01day_R2022SQ,2,94,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMH1par08day,62,2948,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMH1par08day_R2022NRT,2,86,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMH1par08day_R2022SQ,2,78,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMH1par0mday,60,2920,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMH1par0mday_R2022NRT,2,76,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMH1par0mday_R2022SQ,2,96,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMHcdom8day,5,254,NASA Ocean Color,NASA,"CDOM, NASA MODIS Aqua",cdom,modis
+erdMHcdommday,10,416,NASA Ocean Color,NASA,"CDOM, NASA MODIS Aqua",cdom,modis
+erdMHcflh1day,5,230,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMHcflh8day,5,262,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMHcflhmday,5,234,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMHchla1day,11,536,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMHchla8day,8,526,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMHchlamday,9,358,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMHk4901day,5,238,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMHk4908day,6,276,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMHk490mday,6,286,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMHpar01day,7,260,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMHpar08day,5,232,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMHpar0mday,5,232,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMHr6678day,6,280,NASA Ocean Color,NASA,"Rrs, NASA, MODIS Aqua",rrs,modis
+erdMHr667mday,5,216,NASA Ocean Color,NASA,"Rrs, NASA, MODIS Aqua",rrs,modis
+erdMIdeli14day,7,434,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMPchla14day,4,242,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMPchla1day,6,264,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMPchla3day,72,240,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMPchla8day,6,298,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMPchlamday,22,284,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMPIC1day,27,1412,NASA Ocean Color,NASA,"PIC, NASA MODIS Aqua",pic,modis
+erdMPIC1day_R2022NRT,8,374,NASA Ocean Color,NASA,"PIC, NASA MODIS Aqua",pic,modis
+erdMPIC1day_R2022SQ,3,102,NASA Ocean Color,NASA,"PIC, NASA MODIS Aqua",pic,modis
+erdMPIC8day,13,738,NASA Ocean Color,NASA,"PIC, NASA MODIS Aqua",pic,modis
+erdMPIC8day_R2022NRT,3,132,NASA Ocean Color,NASA,"PIC, NASA MODIS Aqua",pic,modis
+erdMPIC8day_R2022SQ,2,90,NASA Ocean Color,NASA,"PIC, NASA MODIS Aqua",pic,modis
+erdMPICmday,84,914,NASA Ocean Color,NASA,"PIC, NASA MODIS Aqua",pic,modis
+erdMPICmday_R2022NRT,3,126,NASA Ocean Color,NASA,"PIC, NASA MODIS Aqua",pic,modis
+erdMPICmday_R2022SQ,2,96,NASA Ocean Color,NASA,"PIC, NASA MODIS Aqua",pic,modis
+erdMPk49014day,4,284,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMPk4901day,93,248,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMPk4903day,4,232,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMPk4908day,4,292,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMPk490mday,3,242,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMPOC1day,14,586,NASA Ocean Color,NASA,"POC, NASA MODIS Aqua",poc,modis
+erdMPOC1day_R2022NRT,7,100,NASA Ocean Color,NASA,"POC, NASA MODIS Aqua",poc,modis
+erdMPOC1day_R2022SQ,2,100,NASA Ocean Color,NASA,"POC, NASA MODIS Aqua",poc,modis
+erdMPOC8day,14,690,NASA Ocean Color,NASA,"POC, NASA MODIS Aqua",poc,modis
+erdMPOC8day_R2022NRT,3,100,NASA Ocean Color,NASA,"POC, NASA MODIS Aqua",poc,modis
+erdMPOC8day_R2022SQ,2,92,NASA Ocean Color,NASA,"POC, NASA MODIS Aqua",poc,modis
+erdMPOCmday,573,1782,NASA Ocean Color,NASA,"POC, NASA MODIS Aqua",poc,modis
+erdMPOCmday_R2022NRT,2,100,NASA Ocean Color,NASA,"POC, NASA MODIS Aqua",poc,modis
+erdMPOCmday_R2022SQ,4,144,NASA Ocean Color,NASA,"POC, NASA MODIS Aqua",poc,modis
+erdMWcdom1day,7,446,NASA Ocean Color,NASA,"CDOM, NASA MODIS Aqua",cdom,modis
+erdMWpar03day,13,1092,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMWpar08day,13,1106,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMH1pp1day,215,3822,ERD Primary Productivity,NASA,"Primary Productivity, MODIS",prim_prod,modis
+erdMH1pp3day,18,962,ERD Primary Productivity,NASA,"Primary Productivity, MODIS",prim_prod,modis
+erdMH1pp8day,44,1108,ERD Primary Productivity,NASA,"Primary Productivity, MODIS",prim_prod,modis
+erdMH1ppmday,622,5364,ERD Primary Productivity,NASA,"Primary Productivity, MODIS",prim_prod,modis
+erdG1ssta1day,17,1696,NASA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,blended
+erdMBsstd14day,494,1470,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMBsstd1day,434,6372,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMBsstd1dayF,1593,2448,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMBsstd3day,40,2294,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMBsstd5day,18,1080,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMBsstd8day,205,2706,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMBsstd8dayF,1199,2622,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMBsstdmday,97,1056,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd1day,12,566,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd1day_R2022NRTMasked,35,136,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd1day_R2022NRTNotMasked,8,242,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd1day_R2022SQMasked,619,316,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd1day_R2022SQNotMasked,2,92,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd1dayR20190,40,1774,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd1dayR20190NotMasked,9,552,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd1dayR20190SQ,207,2432,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd8day,10,588,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd8day_R2022SQMasked,3,104,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd8day_R2022SQNotMasked,2,88,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd8dayR20190,377,1766,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstd8dayR20190SQ,6806,4046,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstdmday,12,644,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstdmday_R2022SQMasked,78,142,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstdmday_R2022SQNotMasked,4,146,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstdmdayR20190,8,510,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMH1sstdmdayR20190SQ,2634,2190,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMHsst41day,5,214,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMHsst48day,5,222,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMHsst4mday,5,246,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMHsstd1day,6,1644,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMHsstd8day,5,230,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMHsstdmday,5,230,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMHsstn8day,5,228,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMHsstnmday,7,334,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMWsstd1day,1825,2248,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMWsstd3day,50,2338,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMWsstd8day,4033,6682,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdMWsstdmday,19094,5612,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+erdQAdivmod14day,9,1070,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAdivmod1day,10,1100,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAdivmod3day,10,1136,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAdivmod8day,9,1082,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAdivmodmday,7,802,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAekm14day,10,1116,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAekm1day,12,1386,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAekm3day,11,1432,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAekm8day,10,1102,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAekmmday,6,728,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAstress14day,10,1188,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAstress1day,2573,1220,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAstress3day,10,1166,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAstress8day,12,1280,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAstressmday,53,1314,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAwind14day,9,1040,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAwind1day,42,1108,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAwind3day,9,1082,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAwind8day,10,1118,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQAwindmday,12,842,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-A
+erdQBdivmod14day,11,1082,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBdivmod1day,14,1140,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBdivmod3day,12,1096,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBdivmod8day,12,1126,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBdivmodmday,8,760,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBekm14day,12,1086,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBekm1day,15,1182,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBekm3day,11,1070,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBekm8day,11,1064,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBekmmday,23,742,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBstress14day,13,1200,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBstress1day,13,1088,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBstress3day,14,1198,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBstress8day,11,1098,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBstressmday,16,790,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBwind14day,11,1062,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBwind1day,231,3496,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBwind3day,216,3356,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBwind8day,216,3382,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQBwindmday,17,2970,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-B
+erdQCwindproducts1day,,,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-C
+erdQCwindproducts3day,,,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-C
+erdQCwindproducts4hrAscending,,,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-C
+erdQCwindproducts4hrDecending,,,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-C
+erdQCwindproducts7day,,,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-C
+erdQCwindproductsMonthly,,,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-C
+erdQMdivmod14day,11,1074,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMdivmod1day,14,1112,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMdivmod3day,12,1104,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMdivmod8day,11,1078,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMdivmodmday,7,704,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMekm14day,12,1122,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMekm1day,55,1182,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMekm3day,11,1058,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMekm8day,12,1118,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMekmmday,155,764,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMstress14day,12,1080,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMstress1day,85,5030,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMstress3day,12,1074,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMstress8day,12,1086,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMstressmday,7,680,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMwind14day,11,1062,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMwind1day,35,1728,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMwind3day,21,1526,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMwind8day,13,1440,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQMwindmday,14,918,ERD Winds,NOAA,"Winds, ASCAT",wind,ASCAT-M
+erdQSdivmod14day,5,430,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSdivmod1day,6,440,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSdivmod3day,6,446,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSdivmod8day,6,428,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSdivmodmday,6,506,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSekm14day,6,524,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSekm1day,7,556,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSekm3day,7,544,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSekm8day,7,538,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSekmmday,12,538,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSstress14day,6,592,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSstress1day,7,586,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSstress3day,7,582,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSstress8day,7,614,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSstressmday,7,604,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSwind1day,6,456,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSwind3day,8,558,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSwind4day,5,494,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSwind8day,6,476,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdQSwindmday,5,618,ERD Winds,NOAA,"Winds, QuickScat",wind,QuickScat
+erdSAchla8day,3,238,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSAchlamday,3,240,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSGchla8day,3,206,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSGchlamday,3,218,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSHcdev8day,3,246,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSHchla14day,3,246,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSHchla1day,4,250,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSHchla3day,4,240,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSHchla8day,4,296,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSHchlahday,3,240,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSW1chla1day,12,646,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSW1chla8day,171,3228,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSW1chlamday,7,426,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSW2018chla1day,24,1430,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSW2018chla8day,21,1362,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSW2018chlamday,452,5166,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSWchla8day,203,21736,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdSWchlamday,31,428,NASA Ocean Color,NASA,"Chlorophyll, NASA SeaWiFS ",chl,SeaWiFS
+erdVH2018chla1day,987,10886,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",chl,viirs-snpp
+erdVH2018chla8day,183,10472,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",chl,viirs-snpp
+erdVH2018chlamday,843,13958,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",chl,viirs-snpp
+erdVH2018k4901day,43,2856,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",kd490,viirs-snpp
+erdVH2018k4908day,23,2016,NASA Ocean Color,NASA,"NASA, Kd490 VIIRS SNPP",kd490,viirs-snpp
+erdVH2018k490mday,440,8918,NASA Ocean Color,NASA,"NASA, Kd490 VIIRS SNPP",kd490,viirs-snpp
+erdVH2018par1day,30,2002,NASA Ocean Color,NASA,"PAR, NASA VIIRS SNPP",par,viirs-snpp
+erdVH2018par8day,51,2886,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,viirs-snpp
+erdVH2018parmday,631,2018,NASA Ocean Color,NASA,"PAR, NASA VIIRS SNPP",par,viirs-snpp
+erdVH2018pic1day,44,2914,NASA Ocean Color,NOAA,"PIC, NASA VIIRS SNPP",pic,viirs-snpp
+erdVH2018pic8day,45,2876,NASA Ocean Color,NASA,"PIC, NASA VIIRS SNPP",pic,viirs-snpp
+erdVH2018picmday,51,2882,NASA Ocean Color,NASA,"PIC, NASA VIIRS SNPP",pic,viirs-snpp
+erdVH2018poc1day,44,2854,NASA Ocean Color,NASA,"POC, NASA VIIRS SNPP",poc,viirs-snpp
+erdVH2018poc8day,46,2818,NASA Ocean Color,NASA,"POC, NASA VIIRS SNPP",poc,viirs-snpp
+erdVH2018pocmday,201,6554,NASA Ocean Color,NASA,"POC, NASA VIIRS SNPP",poc,viirs-snpp
+erdVH2018r6711day,30,1992,NASA Ocean Color,NASA,"Rrs, NASA, VIIRS SNPP",rrs,viirs-snpp
+erdVH2018r6718day,23,2030,NASA Ocean Color,NASA,"Rrs, NASA, VIIRS SNPP",rrs,viirs-snpp
+erdVH2018r671mday,22,1998,NASA Ocean Color,NASA,"Rrs, NASA, VIIRS SNPP",rrs,viirs-snpp
+erdVH2chla1day,8,384,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",chl,viirs-snpp
+erdVH2chla8day,7,386,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",chl,viirs-snpp
+erdVH2chlamday,795,4636,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",chl,viirs-snpp
+erdVH2k4901day,8,400,NASA Ocean Color,NASA,"Kd490, NASA VIIRS SNPP",kd490,viirs-snpp
+erdVH2k4908day,7,400,NASA Ocean Color,NASA,"Kd490, NASA VIIRS SNPP",kd490,viirs-snpp
+erdVH2k490mday,8,452,NASA Ocean Color,NASA,"Kd490, NASA VIIRS SNPP",kd490,viirs-snpp
+erdVH2par1day,8,394,NASA Ocean Color,NASA,"PAR, NASA VIIRS SNPP",par,viirs-snpp
+erdVH2par8day,9,468,NASA Ocean Color,NASA,"PAR, NASA VIIRS SNPP",par,viirs-snpp
+erdVH2parmday,8,444,NASA Ocean Color,NASA,"PAR, NASA VIIRS SNPP",par,viirs-snpp
+erdVH2pic1day,7,382,NASA Ocean Color,NASA,"PIC, NASA VIIRS SNPP",pic,viirs-snpp
+erdVH2pic8day,7,396,NASA Ocean Color,NASA,"PIC, NASA VIIRS SNPP",pic,viirs-snpp
+erdVH2picmday,7,418,NASA Ocean Color,NASA,"PIC, NASA VIIRS SNPP",pic,viirs-snpp
+erdVH2poc1day,8,430,NASA Ocean Color,NASA,"POC, NASA VIIRS SNPP",poc,viirs-snpp
+erdVH2poc8day,7,390,NASA Ocean Color,NASA,"POC, NASA VIIRS SNPP",poc,viirs-snpp
+erdVH2pocmday,8,458,NASA Ocean Color,NASA,"POC, NASA VIIRS SNPP",poc,viirs-snpp
+erdVH2r6711day,7,370,NASA Ocean Color,NASA,"Rrs, NASA, VIIRS SNPP",rrs,viirs-snpp
+erdVH2r6718day,7,388,NASA Ocean Color,NASA,"Rrs, NASA, VIIRS SNPP",rrs,viirs-snpp
+erdVH2r671mday,7,438,NASA Ocean Color,NASA,"Rrs, NASA, VIIRS SNPP",rrs,viirs-snpp
+erdVH3chla1day,10,462,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",chl,viirs-snpp
+erdVH3chla8day,7,402,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",chl,viirs-snpp
+erdVH3chlamday,9,486,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",chl,viirs-snpp
+erdVH3k4901day,10,392,NASA Ocean Color,NASA,"Kd490, NASA VIIRS SNPP",kd490,viirs-snpp
+erdVH3k4908day,8,420,NASA Ocean Color,NASA,"Kd490, NASA VIIRS SNPP",kd490,viirs-snpp
+erdVH3k490mday,8,420,NASA Ocean Color,NASA,"Kd490, NASA VIIRS SNPP",kd490,viirs-snpp
+erdVH3par1day,9,412,NASA Ocean Color,NASA,"PAR, NASA VIIRS SNPP",par,viirs-snpp
+erdVH3par8day,7,398,NASA Ocean Color,NASA,"PAR, NASA VIIRS SNPP",par,viirs-snpp
+erdVH3parmday,7,390,NASA Ocean Color,NASA,"PAR, NASA VIIRS SNPP",par,viirs-snpp
+erdVH3pic1day,11,464,NASA Ocean Color,NASA,"PIC, NASA VIIRS SNPP",pic,viirs-snpp
+erdVH3pic8day,7,398,NASA Ocean Color,NASA,"PIC, NASA VIIRS SNPP",pic,viirs-snpp
+erdVH3picmday,8,480,NASA Ocean Color,NASA,"PIC, NASA VIIRS SNPP",pic,viirs-snpp
+erdVH3poc1day,9,392,NASA Ocean Color,NASA,"POC, NASA VIIRS SNPP",poc,viirs-snpp
+erdVH3poc8day,9,474,NASA Ocean Color,NASA,"POC, NASA VIIRS SNPP",poc,viirs-snpp
+erdVH3pocmday,7,420,NASA Ocean Color,NASA,"POC, NASA VIIRS SNPP",poc,viirs-snpp
+erdVH3r6711day,10,388,NASA Ocean Color,NASA,"Rrs, NASA, VIIRS SNPP",rrs,viirs-snpp
+erdVH3r6718day,8,414,NASA Ocean Color,NASA,"Rrs, NASA, VIIRS SNPP",rrs,viirs-snpp
+erdVH3r671mday,7,380,NASA Ocean Color,NASA,"Rrs, NASA, VIIRS SNPP",rrs,viirs-snpp
+erdVHchla1day,13,438,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",chl,viirs-snpp
+erdVHchla8day,12,396,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",chl,viirs-snpp
+erdVHchlamday,12,418,NASA Ocean Color,NASA,"Chlorophyll, NASA VIIRS SNPP",chl,viirs-snpp
+erdVHk4901day,12,366,NASA Ocean Color,NASA,"Kd490, NASA VIIRS SNPP",kd490,viirs-snpp
+erdVHk4908day,12,392,NASA Ocean Color,NASA,"Kd490, NASA VIIRS SNPP",kd490,viirs-snpp
+erdVHk490mday,12,414,NASA Ocean Color,NASA,"Kd490, NASA VIIRS SNPP",kd490,viirs-snpp
+erdVHpar1day,12,406,NASA Ocean Color,NASA,"PAR, NASA VIIRS SNPP",par,viirs-snpp
+erdVHpar8day,13,446,NASA Ocean Color,NASA,"PAR, NASA VIIRS SNPP",par,viirs-snpp
+erdVHparmday,13,420,NASA Ocean Color,NASA,"PAR, NASA VIIRS SNPP",par,viirs-snpp
+erdVHpic1day,12,404,NASA Ocean Color,NASA,"PIC, NASA VIIRS SNPP",pic,viirs-snpp
+erdVHpic8day,11,358,NASA Ocean Color,NASA,"PIC, NASA VIIRS SNPP",pic,viirs-snpp
+erdVHpicmday,14,514,NASA Ocean Color,NASA,"PIC, NASA VIIRS SNPP",pic,viirs-snpp
+erdVHpoc1day,12,414,NASA Ocean Color,NASA,"POC, NASA VIIRS SNPP",poc,viirs-snpp
+erdVHpoc8day,11,372,NASA Ocean Color,NASA,"POC, NASA VIIRS SNPP",poc,viirs-snpp
+erdVHpocmday,13,434,NASA Ocean Color,NASA,"POC, NASA VIIRS SNPP",poc,viirs-snpp
+erdVHr6711day,12,398,NASA Ocean Color,NASA,"Rrs, NASA, VIIRS SNPP",rrs,viirs-snpp
+erdVHr6718day,11,382,NASA Ocean Color,NASA,"Rrs, NASA, VIIRS SNPP",rrs,viirs-snpp
+erdVHr671mday,12,416,NASA Ocean Color,NASA,"Rrs, NASA, VIIRS SNPP",rrs,viirs-snpp
+iprcAquariusOISSS7day,6,446,NASA Salinity,NASA,Salinity Aquarius,saltinity,Aquarius
+jplAquariusSSS3MonthV5,23,4438,NASA Salinity,NASA,Salinity Aquarius,saltinity,Aquarius
+jplAquariusSSS7DayV5,30,4380,NASA Salinity,NASA,Salinity Aquarius,saltinity,Aquarius
+jplAquariusSSSDailyV5,104,5022,NASA Salinity,NASA,Salinity Aquarius,saltinity,Aquarius
+jplAquariusSSSMonthlyV5,290,10364,NASA Salinity,NASA,Salinity Aquarius,saltinity,Aquarius
+erdMWcdom14day,6,464,NASA Ocean Color,NASA,"CDOM, NASA MODIS Aqua",cdom,modis
+erdMWcdom3day,8,532,NASA Ocean Color,NASA,"CDOM, NASA MODIS Aqua",cdom,modis
+erdMWcdom8day,8,534,NASA Ocean Color,NASA,"CDOM, NASA MODIS Aqua",cdom,modis
+erdMWcdommday,6,488,NASA Ocean Color,NASA,"CDOM, NASA MODIS Aqua",cdom,modis
+erdMWcflh14day,14,1142,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMWcflh1day,16,1168,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMWcflh3day,13,1050,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMWcflh8day,3561,2288,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMWcflhmday,9,712,NASA Ocean Color,NASA,"Chlorophyll fluorescence, NASA MODIS Aqua",chl_fluor,modis
+erdMWchla14day,120,1374,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMWchla1day,6490,8368,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMWchla3day,2490,3210,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMWchla8day,12062,7070,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMWchlamday,3327,7018,NASA Ocean Color,NASA,"Chlorophyll, NASA MODIS Aqua",chl,modis
+erdMWk49014day,13,1110,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMWk4901day,18,1224,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMWk4903day,15,1118,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMWk4908day,13,1110,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMWk490mday,9,700,NASA Ocean Color,NASA,"Kd490, NASA MODIS Aqua",kd490,modis
+erdMWpar014day,12,1070,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMWpar01day,14,1060,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMWpar0mday,17,722,NASA Ocean Color,NASA,"PAR, NASA MODIS Aqua",par,modis
+erdMWpp1day,22,2214,ERD Primary Productivity,NASA,"Primary Productivity, MODIS",prim_prod,modis
+erdMWpp3day,22,2194,ERD Primary Productivity,NASA,"Primary Productivity, MODIS",prim_prod,modis
+erdMWsstd14day,420,2216,NASA Sea Surface Temperature,NASA,SST NASA MODIS Aqua,sst,modis
+jplG1SST,8557,4362,NASA Sea Surface Temperature,NASA,"SST, NASA G1",sst,blended
+jplAmsreSstMon,130,3266,NASA Sea Surface Temperature,NASA,SST NASA AMSR,sst,amsr
+nesdisSSH1day,2281,9058,NOAA Altimetery,NOAA,"SSH, NOAA",ssh,blended
+ecocast,6,170,Habitat Model,Multiple,NOAA EcoCast Habitat Model,habitat,model
+erdVHNchla1day,25612,12178,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS SNPP",chl,viirs-snpp
+erdVHNchla3day,1848,9418,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS SNPP",chl,viirs-snpp
+erdVHNchla8day,1998,8044,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS SNPP",chl,viirs-snpp
+erdVHNchlamday,4975,4964,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS SNPP",chl,viirs-snpp
+nesdisVHNchlaDaily,4094,5158,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS SNPP",chl,viirs-snpp
+nesdisVHNchlaWeekly,646,256,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS SNPP",chl,viirs-snpp
+nesdisVHNkd490Daily,2,60,NOAA Ocean Color,NOAA,"Kd490, NOAA VIIRS SNPP",kd_490,viirs-snpp
+nesdisVHNkd490Weekly,1,46,NOAA Ocean Color,NOAA,"Kd490, NOAA VIIRS SNPP",kd_490,viirs-snpp
+nesdisVHNkdparDaily,2,54,NOAA Ocean Color,NOAA,"KdPAR, NOAA VIIRS SNPP",kd_par,viirs-snpp
+nesdisVHNkdparWeekly,2,70,NOAA Ocean Color,NOAA,"KdPAR, NOAA VIIRS SNPP",kd_par,viirs-snpp
+nesdisVHNnLw410Daily,2,54,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNnLw410Weekly,2,58,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNnLw443Daily,2,50,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNnLw443Weekly,1,36,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNnLw486Daily,2,54,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNnLw486Weekly,1,46,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNnLw551Daily,2,54,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNnLw551Weekly,2,66,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNnLw638Daily,1,44,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNnLw638Weekly,2,70,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNnLw671Daily,2,54,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNnLw671Weekly,1,44,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNnoaa20chlaDaily,2,118,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS NOAA-20",chl,viirs-n20
+nesdisVHNnoaa20chlaWeekly,2,86,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS NOAA-20",chl,viirs-n20
+nesdisVHNnoaaSNPPnoaa20chlaDaily,2,116,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS NOAA-20 and NSPP Blended",chl,viirs-snpp-n20
+nesdisVHNnoaaSNPPnoaa20chlaGapfilledDaily,1,52,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS Gap-Filled",chl,viirs-snpp-n20
+nesdisVHNSQchlaDaily,13,446,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS SNPP",chl,viirs-snpp
+nesdisVHNSQchlaMonthly,8,460,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS SNPP",chl,viirs-snpp
+nesdisVHNSQchlaWeekly,6,334,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS SNPP",chl,viirs-snpp
+nesdisVHNSQkd490Daily,9,240,NOAA Ocean Color,NOAA,"Kd490, NOAA VIIRS SNPP",kd490,viirs-snpp
+nesdisVHNSQkd490Monthly,4,288,NOAA Ocean Color,NOAA,"Kd490, NOAA VIIRS SNPP",kd490,viirs-snpp
+nesdisVHNSQkd490Weekly,487,6826,NOAA Ocean Color,NOAA,"Kd490, NOAA VIIRS SNPP",kd490,viirs-snpp
+nesdisVHNSQkdparDaily,11,274,NOAA Ocean Color,NOAA,"KdPAR, NOAA VIIRS SNPP",kd_par,viirs-snpp
+nesdisVHNSQkdparMonthly,5,318,NOAA Ocean Color,NOAA,"Kd490, NOAA VIIRS SNPP",kd490,viirs-snpp
+nesdisVHNSQkdparWeekly,5,306,NOAA Ocean Color,NOAA,"Kd490, NOAA VIIRS SNPP",kd490,viirs-snpp
+nesdisVHNSQnLw410Daily,10,262,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw410Monthly,4,268,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw410Weekly,5,266,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw443Daily,9,220,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw443Monthly,4,276,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw443Weekly,4,272,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw486Daily,10,240,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw486Monthly,3,264,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw486Weekly,5,314,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw551Daily,10,238,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw551Monthly,3,262,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw551Weekly,5,260,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw671Daily,10,230,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw671Monthly,3,260,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+nesdisVHNSQnLw671Weekly,4,256,NOAA Ocean Color,NOAA,"Rrs, NOAA, VIIRS SNPP",rrs,viirs-snpp
+coastwatchSMAPV42SSS1day,4,198,NOAA Salinity,NOAA,"Salinity, SMAP",saltinity,smap
+coastwatchSMOSv662SSS1day,8,314,NOAA Salinity,NOAA,"Salinity, SMOS",saltinity,smos
+coastwatchSMOSv662SSS3day,3,272,NOAA Salinity,NOAA,"Salinity, SMOS",saltinity,smos
+erdATastdhday,91,2290,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATastnhday,40,1154,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATclddhday,34,1224,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATcldnhday,38,1142,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATssta14day,108,1268,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATssta1day,7325,49896,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATssta1dayF,328,5322,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATssta3day,1288,9012,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATssta8day,5761,9762,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATssta8dayF,2359,4686,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATsstamday,952,2104,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATsstdhday,7507,4144,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATsstnhday,92,3624,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdATsstnhdayF,41,1448,NOAA Sea Surface Temperature,NOAA,"SST, NOAA POES AVHRR",sst,AVHRR
+erdGAssta14day,48,3134,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,goes
+erdGAssta1day,53,3260,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,goes
+erdGAssta3day,51,3172,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,goes
+erdGAssta5day,20,2262,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,goes
+erdGAssta8day,49,3102,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,goes
+erdGAsstahday,200,3034,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,goes
+erdGAsstamday,256,6728,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,goes
+erdGRssta1day,18,1724,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,goes
+erdPH2ssta1day,25,578,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V4",sst,AVHRR
+erdPH2ssta8day,63,618,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V4",sst,AVHRR
+erdPH2sstamday,10,552,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V4",sst,AVHRR
+erdPH2sstd8day,14,658,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V4",sst,AVHRR
+erdPH2sstdmday,11,490,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V4",sst,AVHRR
+erdPH2sstn8day,11,418,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V4",sst,AVHRR
+erdPH2sstnmday,9,414,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V4",sst,AVHRR
+erdPH53sstd8day,216,818,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V5.3",sst,AVHRR
+erdPH53sstdmday,698,2104,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V5.3",sst,AVHRR
+erdPH53sstn8day,83,2140,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V5.3",sst,AVHRR
+erdPH53sstnmday,167,5100,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V5.3",sst,AVHRR
+erdVHsstaWN3day,250,6954,NOAA Sea Surface Temperature,NOAA,"SST, NOAA VIIRS SNPP",sst,viirs-snpp
+erdVHsstaWS3day,309,8140,NOAA Sea Surface Temperature,NOAA,"SST, NOAA VIIRS SNPP",sst,viirs-snpp
+goes_west,,,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,goes
+jplNesdisG17v271,1564,14298,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,goes
+jplOscar,12414,12472,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,goes
+jplStarG16SSTv270,12012,12844,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GOES ",sst,goes
+ncdcOisst21Agg,11836,12184,NOAA Sea Surface Temperature,NOAA,"SST, NOAA Optimum Interpolation",sst,oisst
+ncdcOisst21NrtAgg,253,5952,NOAA Sea Surface Temperature,NOAA,"SST, NOAA Optimum Interpolation",sst,oisst
+ncdcOisst2Agg,2164,13324,NOAA Sea Surface Temperature,NOAA,"SST, NOAA Optimum Interpolation",sst,oisst
+ncdcOisst2AmsrAgg,10,596,NOAA Sea Surface Temperature,NOAA,"SST, NOAA Optimum Interpolation",sst,oisst
+nceiPH53sstd1day,13145,4114,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V5.3",sst,AVHRR
+nceiPH53sstn1day,125,1666,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V5.3",sst,AVHRR
+nesdisBLENDEDsstDaily,,,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GeoPolar Blended ",sst,blended
+nesdisBLENDEDsstDLDaily,,,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GeoPolar Blended ",sst,blended
+nesdisBLENDEDsstDNDaily,,,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GeoPolar Blended ",sst,blended
+nesdisGeoPolarSSTN5NRT,8,426,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GeoPolar Blended ",sst,blended
+nesdisGeoPolarSSTN5SQ,7,300,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GeoPolar Blended ",sst,blended
+nesdisGeoPolarSSTN5SQNRT,149,534,NOAA Sea Surface Temperature,NOAA,"SST, NOAA GeoPolar Blended ",sst,blended
+nesdisVHNnoaa20sstDaily,16,116,NOAA Ocean Color,NOAA,"Chlorophyll, NOAA VIIRS NOAA-20",chl,viirs-n20
+nesdisVHNsstDaily,3824,1080,NOAA Sea Surface Temperature,NOAA,"SST, NOAA VIIRS SNPP",sst,viirs-snpp
+NOAA_DHW,32,1252,NOAA Sea Surface Temperature,NOAA,"SST, Coral Reef Watch",sst+,blended
+NOAA_DHW_monthly,1029,5654,NOAA Sea Surface Temperature,NOAA,"SST, Coral Reef Watch",sst+,blended
+noaacwLEOACSPOSSTL3SCDaily,,,NOAA Sea Surface Temperature,NOAA,"SST and Fronts, NOAA Super-collated",sst,blended
+noaacwLEOACSPOSSTL3SnrtCDaily,,,NOAA Sea Surface Temperature,NOAA,"SST and Fronts, NOAA Super-collated",sst,blended
+nodcPH2sstd1day,12,422,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V5.2",sst,blended
+nodcPH2sstn1day,11,398,NOAA Sea Surface Temperature,NOAA,"SST, Pathfinder V5.2",sst,blended
+nceiErsstv4,10,674,NOAA Sea Surface Temperature,NOAA,NOAA ERSST 1854-present,sst,blended
+nceiErsstv5,184,782,NOAA Sea Surface Temperature,NOAA,NOAA ERSST 1854-present,sst,blended
+ncdcOw6hr,89,3048,NOAA Winds,NOAA,Winds Blended NOAA,wind,blended
+ncdcOw6hrStrs,65,2214,NOAA Winds,NOAA,Winds Blended NOAA,wind,blended
+ncdcOwClm9505,7,1416,NOAA Winds,NOAA,Winds Blended NOAA,wind,blended
+ncdcOwDly,23,2260,NOAA Winds,NOAA,Winds Blended NOAA,wind,blended
+ncdcOwDlyStrs,251,3310,NOAA Winds,NOAA,Winds Blended NOAA,wind,blended
+ncdcOwMon,9,2610,NOAA Winds,NOAA,Winds Blended NOAA,wind,blended
+ncdcOwMonStrs,11,2618,NOAA Winds,NOAA,Winds Blended NOAA,wind,blended
+pmlEsaCCI31OceanColor8Day,22,660,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.3",multiple,blended
+pmlEsaCCI31OceanColorDaily,24,592,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.3",multiple,blended
+pmlEsaCCI31OceanColorMonthly,32,776,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.3",multiple,blended
+pmlEsaCCI42OceanColor8Day,450,2440,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.4",multiple,blended
+pmlEsaCCI42OceanColorDaily,25,708,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.4",multiple,blended
+pmlEsaCCI42OceanColorMonthly,266,1728,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.4",multiple,blended
+pmlEsaCCI50OceanColor5Day,29,604,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.5",multiple,blended
+pmlEsaCCI50OceanColor8Day,256,2802,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.5",multiple,blended
+pmlEsaCCI50OceanColorDaily,2156,1026,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.5",multiple,blended
+pmlEsaCCI50OceanColorMonthly,41526,5736,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.5",multiple,blended
+pmlEsaCCI60OceanColor5Day,,,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.6",multiple,blended
+pmlEsaCCI60OceanColor8Day,,,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.6",multiple,blended
+pmlEsaCCI60OceanColorDaily,,,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.6",multiple,blended
+pmlEsaCCI60OceanColorMonthly,,,OC-CCI Ocean Color,ESA,"Chlorophyll, OC-CCI V.6",multiple,blended
+sardine_habitat_modis,63,4670,Sardine Habitat Model,NOAA,Sardine Habitat Model MODIS,habitat,modis
+sardine_habitat_viirs,30,1178,Sardine Habitat Model,NOAA,Sardine Habitat Model VIIRS,habitat,viirs-snpp
