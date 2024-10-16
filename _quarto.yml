@@ -6,7 +6,7 @@ format:
   dashboard:
     nav-buttons:
       - icon: github
-        href: https://github.com/polarwatch/
+        href: https://github.com/polarwatch/data-dashboard
   html:
     theme:
       - style/custom.scss
