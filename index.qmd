@@ -185,7 +185,7 @@ fig.show()
 
 
 ```{python}
-#| title: Download by File Type
+#| title: Download (Kb) by File Type
 
 import plotly.express as px
 df_volume= alldata_sum[alldata_sum['year'] == thisyear].filter(regex='_volume$')
