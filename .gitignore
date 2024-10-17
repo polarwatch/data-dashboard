@@ -1,4 +1,5 @@
 /.quarto/
 /_site/
+/iframe_figures/
 .vdoc.py
 .mypy_cache

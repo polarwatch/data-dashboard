@@ -15,6 +15,8 @@ import requests
 import io
 from itables import show
 import datetime
+import plotly.io as pio
+pio.renderers.default = "iframe_connected"
 ```
 
 ```{python}
@@ -73,19 +75,18 @@ total_data = alldata_sum.loc[alldata_sum['year'] == thisyear, 'data_volume'].ilo
 
 
 # Top 10 data for current year
-df_all_thisyear = df[df['year'] == thisyear].merge(df_crosswalk, on='dataset_id', how='inner')
+df_all_thisyear = df_all[df_all['year'] == thisyear]
+#df_all_thisyear = df[df['year'] == thisyear].merge(df_crosswalk, on='dataset_id', how='inner')
 top10_thisyear = (df_all_thisyear.groupby('group_title', as_index=False)[['all_requests', 'requests_x', 'requests_redirect']]
                   .sum(numeric_only=True)
                   .nlargest(10, 'all_requests'))
 
-
-# Top 10 data for each year (based on current year top 10)
+# Top 10 data time series (based on current year top 10)
 top10_years = (df_all[df_all['group_title'].isin(top10_thisyear['group_title'])]
               .groupby(['group_title', 'year'], as_index=False)[['all_requests']]
               .sum())
               
 ```
-
 
 # Top 10 Data Request
 ## Row {height=10%}
@@ -94,48 +95,45 @@ top10_years = (df_all[df_all['group_title'].isin(top10_thisyear['group_title'])]
 No. of Requests
 
 `{python} "{:,}".format(total_requests)`
-
 :::
 
 ::: {.valuebox icon="database-down" color="#e1dbd6"}
 No. of Redirect Request
 
 `{python} "{:,}".format(total_redirect)`
-
 :::
 
 ::: {.valuebox icon="database-down" color="#e2e2e2"}
 Data Volume (Mb)
 
 `{python} "{:,}".format(total_data)`
-
 :::
 
 ::: {.valuebox icon="person-lines-fill" color="#f9f6f2"}
 Monthly Avg Users
 
 `{python} unique_users`
-
 :::
 
 
 ## Row {height=40% .tabset}
-
 
 ```{python}
 #| title: Top 10 Data Chart
 
 import plotly.express as px
 
+# Set graphing order 
 top10_years['year'] = top10_years['year'].astype(str)
 top10_years = top10_years.sort_values(by='year')
 
 #sorted = top10_years.sort_values(by=['year', 'all_requests'], ascending=False)
 
-
+# Plotly barchart
 fig = px.bar(top10_years, x='group_title', y='all_requests', 
               color='year', labels={"group_title": "Group Name", "all_requests": "Requests"}, color_discrete_sequence=colors[::-1],barmode='group', width=None)
 
+# Set plotly config
 fig.update_layout(autosize=True, 
        width=None, 
        height=None, 
