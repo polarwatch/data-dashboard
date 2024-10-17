@@ -16,7 +16,9 @@ import io
 from itables import show
 import datetime
 import plotly.io as pio
-pio.renderers.default = "iframe_connected"
+#pio.renderers
+pio.renderers.default = "notebook_connected" 
+
 ```
 
 ```{python}
