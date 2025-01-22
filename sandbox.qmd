@@ -1,0 +1,416 @@
+---
+title: "CoastWatch-West Coast (Under Developement)"
+format: 
+  dashboard:
+    logo: img/cw_logo.png
+    logo-alt: "NOAA CoastWatch logo"
+    scrolling: true 
+jupyter: python3
+---
+
+```{python}
+#| label: load-packages
+import pandas as pd
+import requests
+import io
+from itables import show
+import datetime
+import plotly.io as pio
+#pio.renderers
+pio.renderers.default = "notebook_connected" 
+
+```
+
+```{python}
+#| label: load-data
+
+df = pd.read_csv("data/wcn_usage.csv")
+df_crosswalk = pd.read_csv("data/wcn_log_crosswalk.csv")
+
+# Columns for stats
+stats_cols = ['data_volume', 'requests', 'nc_req', 'dods_req', 'text_req',
+       'metadata_req', 'graph_req', 'json_req', 'mat_req', 'images_req',
+       'file_downloads_req', 'other_req', 'nc_volume', 'dods_volume',
+       'text_volume', 'metadata_volume', 'graph_volume', 'json_volume',
+       'mat_volume', 'images_volume', 'file_downloads_volume', 'other_size',
+       'requests_redirect', 'nc_req_redirect', 'dods_req_redirect',
+       'text_req_redirect', 'metadata_req_redirect', 'graph_req_redirect',
+       'json_req_redirect', 'mat_req_redirect', 'images_req_redirect',
+       'file_download_req_redirect', 'other_req_redirect', 'all_requests']
+
+# This year
+thisyear = datetime.date.today().year
+
+# Color 
+colors = ['#003f5c', '#58508d', '#bc5090', '#ff6361', '#ffa600']
+
+```
+
+```{python}
+#| label: prep-usage-data
+
+# Combine requests and redirect requests
+df['all_requests'] = df['requests'] + df['requests_redirect']
+
+# Add year and month to the df
+df['time'] = pd.to_datetime(df['time'], utc=True)
+df['year'] = df['time'].dt.year
+df['month'] = df['time'].dt.month
+
+# Merge log and cross walk (inner join)
+df_all = df.merge(df_crosswalk, on='dataset_id', how='inner')
+
+# Get all_dataset
+alldata = df[df['dataset_id'] == 'all_datasets']
+
+# Compute sum for all datasets
+alldata_sum = alldata.groupby(['year'])[stats_cols].sum().reset_index()
+
+# Compute mean stats for all dataset
+alldata_mean = alldata.groupby(['year'])[['unique_visitors']].mean().reset_index()
+
+# ValueBox items
+total_requests = alldata_sum.loc[alldata_sum['year'] == thisyear, 'requests'].iloc[0]
+total_redirect = alldata_sum.loc[alldata_sum['year'] == thisyear, 'requests_redirect'].iloc[0]
+unique_users = int(alldata_mean.loc[alldata_mean['year'] == thisyear, 'unique_visitors'].iloc[0])
+total_data = alldata_sum.loc[alldata_sum['year'] == thisyear, 'data_volume'].iloc[0]
+
+
+# Top 10 data for current year
+df_all_thisyear = df_all[df_all['year'] == thisyear]
+#df_all_thisyear = df[df['year'] == thisyear].merge(df_crosswalk, on='dataset_id', how='inner')
+top10_thisyear = (df_all_thisyear.groupby('group_title', as_index=False)[['all_requests', 'requests_x', 'requests_redirect']]
+                  .sum(numeric_only=True)
+                  .nlargest(10, 'all_requests'))
+
+# Top 10 data time series (based on current year top 10)
+top10_years = (df_all[df_all['group_title'].isin(top10_thisyear['group_title'])]
+              .groupby(['group_title', 'year'], as_index=False)[['all_requests']]
+              .sum())
+              
+```
+
+# Top 10 Data Request
+## Row {height=10%}
+
+::: {.valuebox icon="cloud-download-fill" color="#d1d1d1"}
+No. of Requests
+
+`{python} "{:,}".format(total_requests)`
+:::
+
+::: {.valuebox icon="database-down" color="#e1dbd6"}
+No. of Redirect Request
+
+`{python} "{:,}".format(total_redirect)`
+:::
+
+::: {.valuebox icon="database-down" color="#e2e2e2"}
+Data Volume (Mb)
+
+`{python} "{:,}".format(total_data)`
+:::
+
+::: {.valuebox icon="person-lines-fill" color="#f9f6f2"}
+Monthly Avg Users
+
+`{python} unique_users`
+:::
+
+
+## Row {height=40% .tabset}
+
+```{python}
+#| title: Top 10 Data Chart
+
+import plotly.express as px
+
+# Set graphing order 
+top10_years['year'] = top10_years['year'].astype(str)
+top10_years = top10_years.sort_values(by='year')
+
+#sorted = top10_years.sort_values(by=['year', 'all_requests'], ascending=False)
+
+# Plotly barchart
+fig = px.bar(top10_years, x='group_title', y='all_requests', 
+              color='year', labels={"group_title": "Group Name", "all_requests": "Requests"}, color_discrete_sequence=colors[::-1],barmode='group', width=None)
+
+# Set plotly config
+fig.update_layout(autosize=True, 
+       width=None, 
+       height=None, 
+       xaxis=dict(tickangle=15),
+       legend=dict(
+       orientation="h",  # Horizontal orientation
+       yanchor="bottom",
+       y=1.1,            # Position slightly above the plot area
+       xanchor="center",
+       x=0.5,
+       font=dict(size=13))
+              )
+```
+
+```{python}
+#| title: Top 10 Data Table
+
+wide_top10_years = top10_years.pivot(index='group_title', columns ='year', values='all_requests').reset_index()
+wide_top10_years.columns.name = None  # Remove the name from columns index if not needed
+wide_top10_years = (wide_top10_years
+              .rename_axis(None, axis=1)
+              .rename(columns={'group_title': 'Group Name'}))
+
+
+show(wide_top10_years)
+
+```
+
+
+## Row 
+
+
+```{python}
+#| title: Requests by File Type
+
+
+import plotly.express as px
+df_req = alldata_sum[alldata_sum['year'] == thisyear].filter(regex='_req$')
+df_req.columns = df_req.columns.str.extract(r'^(.*)_req$')[0]
+df_req_long = df_req.reset_index(drop=True).melt(var_name='File Type', value_name='Requests')
+
+fig = px.pie(df_req_long, values='Requests', names='File Type', title='Request by file type')
+fig.show()
+
+
+```
+
+
+```{python}
+#| title: Download (Kb) by File Type
+
+import plotly.express as px
+df_volume= alldata_sum[alldata_sum['year'] == thisyear].filter(regex='_volume$')
+df_volume.columns = df_volume.columns.str.extract(r'^(.*)_volume$')[0]
+df_volume_long = df_volume.reset_index(drop=True).melt(var_name='File Type', value_name='Volume')
+fig = px.pie(df_volume_long, values='Volume', names='File Type')
+
+fig
+
+
+```
+
+
+# SST
+
+```{python}
+
+# Top 10
+ 
+df_all_thisyear = df[df['year'] == thisyear].merge(df_crosswalk, on='dataset_id', how='inner')
+top10_sst_thisyear = (df_all_thisyear[df_all_thisyear['var']=='sst'].groupby('group_title', as_index=False)[['all_requests', 'requests_x', 'requests_redirect']]
+                  .sum(numeric_only=True)
+                  .nlargest(10, 'all_requests'))
+
+
+# SST sumed by year and dataset_title
+df_sst = df_all[df_all['var'] == 'sst'].groupby(['year', 'dataset_title'], as_index=False).sum(numeric_only=True).reset_index()
+top10_sst = df_sst[df_sst['year'] == thisyear].nlargest(10, 'all_requests')
+sst_stats = df_sst[df_sst['year'] == thisyear].sum(numeric_only=True)
+
+
+# value box
+req_sst = sst_stats[sst_stats.index == 'all_requests'].item()
+user_sst = sst_stats[sst_stats.index == 'unique_visitors'].item()
+data_sst = sst_stats[sst_stats.index == 'data_volume_x'].item()
+
+# top10_sst chart
+top10_sst_years = (df_all[df_all['dataset_title'].isin(top10_sst['dataset_title'])]
+              .groupby(['dataset_title', 'year'], as_index=False)[['all_requests']]
+              .sum())
+
+# top10_sst data table
+#top10_sst.loc[:, ['year', 'dataset_title', 'all_requests']]
+top10_sst_wide = top10_sst_years.pivot(index='dataset_title', columns ='year', values='all_requests').reset_index()
+top10_sst_wide.columns.name = None
+top10_sst_wide = (top10_sst_wide
+              .rename_axis(None, axis=1)
+              .rename(columns={'dataset_title': 'Dataset Title'}))
+
+
+```
+
+## Row {height=10%}
+
+
+::: {.valuebox icon="cloud-download-fill" color="#d1d1d1"}
+No. of Requests
+
+`{python} "{:,}".format(req_sst)`
+
+:::
+
+
+::: {.valuebox icon="database-down" color="#e2e2e2"}
+Data Volume (GB)
+
+`{python} "{:,}".format(data_sst)`
+
+:::
+
+::: {.valuebox icon="person-lines-fill" color="#f9f6f2"}
+Total Visitors
+
+`{python} int(user_sst)`
+
+:::
+
+
+## Row {height=30% .tabset}
+
+
+```{python}
+#| title: Top 10 SST
+
+import plotly.express as px
+
+# top10_sst chart
+top10_sst_years['year'] = top10_years['year'].astype(str)
+#sorted = top10_sst_years.sort_values(by=['year', 'all_requests'], ascending=False)
+
+
+fig = px.bar(top10_sst_years, x='dataset_title', y='all_requests', 
+              color='year', labels={"dataset_title": "Dataset Name", "all_requests": "Requests"}, color_discrete_sequence=colors[::-1],barmode='group', width=None)
+
+fig.update_layout(autosize=True, 
+       width=None, 
+       height=None, 
+       xaxis=dict(tickangle=15),
+       legend=dict(
+       orientation="h",  # Horizontal orientation
+       yanchor="bottom",
+       y=1.1,            # Position slightly above the plot area
+       xanchor="center",
+       x=0.5,
+       font=dict(size=13))
+              )
+# show(top10_years)
+```
+
+```{python}
+#| title: Top 10 Data Table
+
+wide_top10_sst = top10_sst_years.pivot(index='dataset_title', columns ='year', values='all_requests').reset_index()
+wide_top10_sst.columns.name = None  # Remove the name from columns index if not needed
+wide_top10_sst = (wide_top10_sst
+              .rename_axis(None, axis=1)
+              .rename(columns={'dataset_title': 'Dataset Name'}))
+
+show(wide_top10_sst)
+
+```
+
+
+# Wind
+
+```{python}
+
+top10_wind_thisyear = (df_all_thisyear[df_all_thisyear['var']=='wind'].groupby('group_title', as_index=False)[['all_requests', 'requests_x', 'requests_redirect']]
+                  .sum(numeric_only=True)
+                  .nlargest(10, 'all_requests'))
+
+
+# wind sumed by year and dataset_title
+df_wind = df_all[df_all['var'] == 'wind'].groupby(['year', 'dataset_title'], as_index=False).sum(numeric_only=True).reset_index()
+top10_wind = df_wind[df_wind['year'] == thisyear].nlargest(10, 'all_requests')
+wind_stats = df_wind[df_wind['year'] == thisyear].sum(numeric_only=True)
+
+
+# value box
+req_wind = wind_stats[wind_stats.index == 'all_requests'].item()
+user_wind = wind_stats[wind_stats.index == 'unique_visitors'].item()
+data_wind = wind_stats[wind_stats.index == 'data_volume_x'].item()
+
+# top10_wind chart
+top10_wind_years = (df_all[df_all['dataset_title'].isin(top10_wind['dataset_title'])]
+              .groupby(['dataset_title', 'year'], as_index=False)[['all_requests']]
+              .sum())
+
+
+top10_wind_wide = top10_wind_years.pivot(index='dataset_title', columns ='year', values='all_requests').reset_index()
+top10_wind_wide.columns.name = None
+top10_wind_wide = (top10_wind_wide
+              .rename_axis(None, axis=1)
+              .rename(columns={'dataset_title': 'Dataset Title'}))
+
+
+```
+
+## Row {height=10%}
+
+
+::: {.valuebox icon="cloud-download-fill" color="#d1d1d1"}
+No. of Requests
+
+`{python} "{:,}".format(req_wind)`
+
+:::
+
+
+::: {.valuebox icon="database-down" color="#e2e2e2"}
+Data Volume (GB)
+
+`{python} "{:,}".format(data_wind)`
+
+:::
+
+::: {.valuebox icon="person-lines-fill" color="#f9f6f2"}
+Total Visitors
+
+`{python} int(user_wind)`
+
+:::
+
+ 
+## Row {height=40% .tabset}
+
+
+
+```{python}
+#| title: Top 10 wind
+
+import plotly.express as px
+
+# top10_wind chart
+top10_wind_years['year'] = top10_years['year'].astype(str)
+#sorted = top10_wind_years.sort_values(by=['year', 'all_requests'], ascending=False)
+
+
+fig = px.bar(top10_wind_years, x='dataset_title', y='all_requests', 
+              color='year', labels={"dataset_title": "Dataset Name", "all_requests": "Requests"}, color_discrete_sequence=colors[::-1],barmode='group', width=None)
+
+fig.update_layout(autosize=True, 
+       width=None, 
+       height=None, 
+       xaxis=dict(tickangle=15),
+       legend=dict(
+       orientation="h",  # Horizontal orientation
+       yanchor="bottom",
+       y=1.1,            # Position slightly above the plot area
+       xanchor="center",
+       x=0.5,
+       font=dict(size=13))
+              )
+# show(top10_years)
+```
+
+```{python}
+#| title: Top 10 Data Table
+
+wide_top10_wind = top10_wind_years.pivot(index='dataset_title', columns ='year', values='all_requests').reset_index()
+wide_top10_wind.columns.name = None  # Remove the name from columns index if not needed
+wide_top10_wind = (wide_top10_wind
+              .rename_axis(None, axis=1)
+              .rename(columns={'dataset_title': 'Dataset Name'}))
+
+show(wide_top10_wind)
+
+```
